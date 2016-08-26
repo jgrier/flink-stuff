@@ -21,3 +21,7 @@ builds into your flink/lib directory:
     metrics.scope.tm.job: <host>.taskmanager.<tm_id>.<job_name>.taskmanager.1
     metrics.scope.tm.task: <host>.taskmanager.<tm_id>.<job_name>.<task_name>.<subtask_index>
     metrics.scope.tm.operator: <host>.taskmanager.<tm_id>.<job_name>.<operator_name>.<subtask_index>
+
+This along with InfluxDB and Grafana allows you to monitor Apache Flink with nice dashoboard like the following:
+
+![Alt text](flink-metrics.png)
