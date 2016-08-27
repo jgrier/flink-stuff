@@ -1,7 +1,8 @@
 InfluxDB Metrics Reporter for Apache Flink
 =============
+This project is just some glue code and configuration to reuse [metrics-influxdb](https://github.com/davidB/metrics-influxdb) in Apache Flink.
 
-To use this add the following configuration to your flink-conf.yaml file and place the JAR this project
+To use it add the following configuration to your flink-conf.yaml file and place the JAR this project
 builds into your flink/lib directory:
 
     metrics.reporters: influxdb
