@@ -3,10 +3,10 @@ package com.jgrier.flinkstuff.sources;
 import com.jgrier.flinkstuff.data.DataPoint;
 import org.apache.flink.configuration.Configuration;
 import org.apache.flink.streaming.api.checkpoint.Checkpointed;
-import org.apache.flink.streaming.api.functions.source.RichSourceFunction;
+import org.apache.flink.streaming.api.functions.source.RichParallelSourceFunction;
 import org.apache.flink.streaming.api.watermark.Watermark;
 
-public class TimestampSource extends RichSourceFunction<DataPoint<Long>> implements Checkpointed<Long> {
+public class TimestampSource extends RichParallelSourceFunction<DataPoint<Long>> implements Checkpointed<Long> {
   private final int periodMs;
   private final int slowdownFactor;
   private volatile boolean running = true;

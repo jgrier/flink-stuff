@@ -43,7 +43,7 @@ class InfluxDbReporter extends ScheduledDropwizardReporter {
     val port = metricConfig.getInteger("port", 8086)
     val user = metricConfig.getString("user", "admin")
     val password = metricConfig.getString("password", "admin")
-    val db = metricConfig.getString("db", "flink-metrics")
+    val db = metricConfig.getString("db", "flink")
 
     InfluxdbReporter.forRegistry(registry)
       .protocol(InfluxdbProtocols.http(server, port, user, password, db))

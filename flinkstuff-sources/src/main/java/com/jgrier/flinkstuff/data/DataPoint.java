@@ -39,7 +39,7 @@ public class DataPoint<T> {
     return new KeyedDataPoint<>(key, this.getTimeStampMs(), newValue);
   }
 
-  public KeyedDataPoint withKey(String key) {
+  public KeyedDataPoint<T> withKey(String key) {
     return new KeyedDataPoint<>(key, this.getTimeStampMs(), this.getValue());
   }
 
