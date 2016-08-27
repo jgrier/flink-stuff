@@ -14,7 +14,7 @@ builds into your flink/lib directory:
     metrics.reporter.influxdb.class: com.jgrier.flinkstuff.metrics.InfluxDbReporter
     metrics.reporter.influxdb.interval: 1 SECONDS
     
-    metrics format: host.process_type.process_id.job_name.task_name.index
+    # metrics format: host.process_type.process_id.job_name.task_name.index
     
     metrics.scope.jm: <host>.jobmanager.1.jobmanager.jobmanager.1
     metrics.scope.jm.job: <host>.jobmanager.1.<job_name>.jobmanager.1
