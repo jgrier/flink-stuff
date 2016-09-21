@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jgrier.flinkstuff</groupId>
-    <artifactId>flink-influx-reporter</artifactId>
+    <artifactId>flink-console-reporter</artifactId>
     <name>${project.artifactId}</name>
 
     <parent>
@@ -21,13 +21,8 @@
         </dependency>
         <dependency>
             <groupId>org.apache.flink</groupId>
-            <artifactId>flink-metrics-dropwizard</artifactId>
+            <artifactId>flink-scala_2.10</artifactId>
             <version>${flink.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.github.davidb</groupId>
-            <artifactId>metrics-influxdb</artifactId>
-            <version>0.8.2</version>
         </dependency>
     </dependencies>
 </project>

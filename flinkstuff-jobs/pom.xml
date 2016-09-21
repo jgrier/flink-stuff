@@ -29,7 +29,7 @@ under the License.
     </parent>
 
     <groupId>com.jgrier.flinkstuff</groupId>
-    <artifactId>flinkstuff-sources</artifactId>
+    <artifactId>flinkstuff-jobs</artifactId>
 
     <dependencies>
         <dependency>
@@ -37,6 +37,15 @@ under the License.
             <artifactId>flink-streaming-scala_2.10</artifactId>
             <version>${flink.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.jgrier.flinkstuff</groupId>
+            <artifactId>flinkstuff-sources</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jgrier.flinkstuff</groupId>
+            <artifactId>flink-console-reporter</artifactId>
+            <version>${flink.version}</version>
+        </dependency>
     </dependencies>
-
 </project>

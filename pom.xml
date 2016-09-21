@@ -4,13 +4,15 @@
     <groupId>com.jgrier.flinkstuff</groupId>
     <artifactId>flinkstuff-parent</artifactId>
 
-    <version>1.0-SNAPSHOT</version>
+    <version>${flink.version}</version>
     <packaging>pom</packaging>
     <name>flinkstuff-parent</name>
 
     <modules>
         <module>flink-influx-reporter</module>
+        <module>flink-console-reporter</module>
         <module>flinkstuff-sources</module>
+        <module>flinkstuff-jobs</module>
     </modules>
 
     <properties>
