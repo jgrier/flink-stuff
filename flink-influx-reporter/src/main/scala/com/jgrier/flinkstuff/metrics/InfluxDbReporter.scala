@@ -3,9 +3,8 @@ package com.jgrier.flinkstuff.metrics
 import java.util.concurrent.TimeUnit
 
 import com.codahale.metrics.{MetricFilter, ScheduledReporter}
-import metrics_influxdb.InfluxdbReporter
+import metrics_influxdb.{HttpInfluxdbProtocol, InfluxdbReporter}
 import metrics_influxdb.api.measurements.CategoriesMetricMeasurementTransformer
-import metrics_influxdb.api.protocols.InfluxdbProtocols
 import org.apache.flink.dropwizard.ScheduledDropwizardReporter
 import org.apache.flink.metrics.MetricConfig
 
@@ -45,7 +44,7 @@ class InfluxDbReporter extends ScheduledDropwizardReporter {
     val db = metricConfig.getString("db", "flink")
 
     InfluxdbReporter.forRegistry(registry)
-      .protocol(InfluxdbProtocols.http(server, port, user, password, db))
+      .protocol(new HttpInfluxdbProtocol(server, port, user, password, db))
       .convertRatesTo(TimeUnit.SECONDS)
       .convertDurationsTo(TimeUnit.MILLISECONDS)
       .filter(MetricFilter.ALL)
